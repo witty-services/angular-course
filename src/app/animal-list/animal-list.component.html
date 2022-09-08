@@ -1,0 +1,6 @@
+<app-card *ngFor="let animal of animals"
+          [title]="animal.name">
+  <div body>
+    Né le {{ animal.birthDate | date }}. Cet animal à {{ animal.age }} ans !
+  </div>
+</app-card>
