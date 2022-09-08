@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { Animal } from '../modules/@core/models/animal.model';
+import { Animal } from '../../@core/models/animal.model';
 
 @Component({
-  selector: 'app-animal-list',
   templateUrl: 'animal-list.component.html'
 })
 export class AnimalListComponent {

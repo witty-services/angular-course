@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CardComponent } from './components/card/card.component';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from './components/header/header.component';
+import { RouterModule } from '@angular/router';
 
 const COMPONENTS: any[] = [
-  CardComponent
+  CardComponent,
+  HeaderComponent
 ];
 
 @NgModule({
@@ -11,7 +14,8 @@ const COMPONENTS: any[] = [
     ...COMPONENTS
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     ...COMPONENTS
