@@ -2,6 +2,7 @@
           title="{{ animal.name }}">
   <div body>
     <a routerLink="/animal/list">Retour à la liste</a><br><br>
+    <a routerLink="/animal/edit/{{ animal.id }}">Éditer</a><br><br>
 
     Né le {{ animal.birthDate | date }}. Cet animal à {{ animal.age }} ans !<br>
 

@@ -7,7 +7,6 @@ import { OwnerService } from '../../@core/services/owner.service';
 import { Owner } from '../../@core/models/owner.model';
 
 @Component({
-  selector: 'app-animal-detail',
   templateUrl: 'animal-detail.component.html'
 })
 export class AnimalDetailComponent {

@@ -6,18 +6,22 @@ import { AnimalComponent } from './animal.component';
 import { RouterModule } from '@angular/router';
 import { animalRoutes } from './animal.routing';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
+import { AnimalFormComponent } from './animal-form/animal-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forChild(animalRoutes)
+    RouterModule.forChild(animalRoutes),
+    ReactiveFormsModule
   ],
   declarations: [
     AnimalComponent,
     AnimalListComponent,
-    AnimalDetailComponent
+    AnimalDetailComponent,
+    AnimalFormComponent
   ],
 })
 export class AnimalModule {

@@ -19,4 +19,8 @@ export class AnimalService {
   public findById(id: number): Observable<Animal> {
     return this.http.get<Animal>(`${ this.url }/${ id }`);
   }
+
+  public update(animal: Animal): Observable<Animal> {
+    return this.http.put<Animal>(`${ this.url }/${ animal.id }`, animal);
+  }
 }
