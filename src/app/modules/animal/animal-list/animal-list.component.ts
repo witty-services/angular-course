@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
 import { Animal } from '../../@core/models/animal.model';
+import { first, Observable } from 'rxjs';
+import { AnimalService } from '../../@core/services/animal.service';
 
 @Component({
   templateUrl: 'animal-list.component.html'
 })
 export class AnimalListComponent {
 
-  public readonly animals: Animal[] = [
-    new Animal({name: 'Samouraï', age: 8, birthDate: new Date()}),
-    new Animal({name: 'Salsa', age: 1, birthDate: new Date()}),
-    new Animal({name: 'Crevette', age: 5, birthDate: new Date(2017, 11, 8)}),
-  ]
+  public readonly animals$: Observable<Animal[]>;
+
+  public constructor(private readonly animalService: AnimalService) {
+    this.animals$ = animalService.findAll().pipe(
+      first()
+    );
+  }
 }

@@ -1,6 +1,6 @@
-import { Owner } from './owner.model';
-
 export class Animal {
+
+  public id: number;
 
   public name: string;
 
@@ -8,7 +8,7 @@ export class Animal {
 
   public birthDate: Date;
 
-  public owner: Owner;
+  public ownerId: number;
 
   public constructor(data: Partial<Animal> = {}) {
     Object.assign(this, data);
