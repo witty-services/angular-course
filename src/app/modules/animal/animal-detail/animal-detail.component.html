@@ -1,0 +1,14 @@
+<app-card *ngIf="animal$ | async as animal"
+          title="{{ animal.name }}">
+  <div body>
+    <a routerLink="/animal/list">Retour à la liste</a><br><br>
+
+    Né le {{ animal.birthDate | date }}. Cet animal à {{ animal.age }} ans !<br>
+
+    <ng-container *ngIf="owner$ | async as owner">
+      <h3>Propriétaire</h3>
+
+      {{ owner.firstName }} {{ owner.lastName | uppercase }}
+    </ng-container>
+  </div>
+</app-card>

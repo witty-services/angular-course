@@ -1,6 +1,7 @@
 <app-card *ngFor="let animal of animals$ | async"
           [title]="animal.name">
   <div body>
-    Né le {{ animal.birthDate | date }}. Cet animal à {{ animal.age }} ans !
+    Né le {{ animal.birthDate | date }}. Cet animal à {{ animal.age }} ans !<br>
+    <a routerLink="/animal/detail/{{ animal.id }}">Détail</a>
   </div>
 </app-card>

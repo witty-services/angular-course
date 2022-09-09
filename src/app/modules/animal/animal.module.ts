@@ -5,6 +5,7 @@ import { AnimalListComponent } from './animal-list/animal-list.component';
 import { AnimalComponent } from './animal.component';
 import { RouterModule } from '@angular/router';
 import { animalRoutes } from './animal.routing';
+import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { animalRoutes } from './animal.routing';
   ],
   declarations: [
     AnimalComponent,
-    AnimalListComponent
+    AnimalListComponent,
+    AnimalDetailComponent
   ],
 })
 export class AnimalModule {
